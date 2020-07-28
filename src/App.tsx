@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Formik, Field, Form } from 'formik'
+import Logo from './assets/images/logo.png';
 
-function App() {
+interface Values {
+  cpf: string,
+}
+
+const CpfValidator = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img className="Logo"
+        src={Logo}
+        alt="logo-animeflix"
+      />
+
+      <Formik initialValues={{
+        cpf: '',
+      }}
+        onSubmit={(
+          values: Values,
+        ) => {
+
+        }}
+      >
+
+        <Form>
+          <div className="formField">
+            <label htmlFor="cpf">
+              Informe o CPF:
+            </label>
+            <Field
+              id="cpf"
+              name="cpf"
+              placeholder="Ex.: 423.486.830-24"
+              type="text"
+            />
+
+            <button type="submit">
+              Validar
+            </button>
+
+          </div>
+        </Form>
+
+      </Formik>
     </div>
   );
 }
 
-export default App;
+export default CpfValidator;

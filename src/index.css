@@ -1,13 +1,94 @@
-body {
+* {
+  background: #ebecf1;
+  box-sizing: border-box;
+  font-family: sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.Logo {
+  display: flex;
+  margin: auto;
+  max-width: 750px;
+}
+@media (max-width: 800px) {
+  .Logo {
+    max-width: 105px;
+  }
+}
+
+form {
+  margin: auto;
+  max-width: 700px;
+  padding: 40px;
+  width: 100%;
+}
+
+.formField {
+  display: flex;
+}
+
+label {
+  background: #3282b8;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 54px;
+  padding: 10px 30px;
+  text-align: justify;
+  width: 150px;
+}
+
+input {
+  border: 3px solid #dadce0;
+  border-radius: 4px;
+  display: flex;
+  font-size: 24px;
+  height: 54px;
+  padding: 13px 15px;
+  text-align: center;
+  transition: border .5s;
+  width: 100%;
+  white-space: normal;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 24px;
+  line-height: 4;
+}
+
+input:focus,
+input:hover {
+  border: 1px solid #1a73e8;
+}
+
+button {
+  background: #21bf73;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  height: 54px;
+  padding: 8px 16px;
+  transition: opacity .5s;
+  width: 150px;
+}
+
+button:focus,
+button:hover {
+  opacity: .5;
 }

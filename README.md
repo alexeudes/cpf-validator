@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple cpf validator to practice the React framework and its features.
 
 ## Available Scripts
 
